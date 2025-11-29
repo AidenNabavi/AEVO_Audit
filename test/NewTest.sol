@@ -71,7 +71,7 @@
         //---------------------------step2--------------------------------
 
         // input for updateLimitParams
-        Controller.UpdateLimitParams;
+        Controller.UpdateLimitParams[] memory params1=new Controller.UpdateLimitParams[](1);
         params1[0] = Controller.UpdateLimitParams({
             isMint: true,
             connector: connector,
@@ -126,7 +126,7 @@
 
         
         // Now the admin again calls this function to update the max limit, setting it higher than last time — meaning 1,000,000 seconds.
-        Controller.UpdateLimitParams;
+        Controller.UpdateLimitParams[] memory params2=new Controller.UpdateLimitParams[](1);
         params2[0] = Controller.UpdateLimitParams({
             isMint: true,
             connector: connector,
